@@ -1,23 +1,25 @@
+import globals.Globals
+
 ServerEvents.recipes(event => {
 
   event.recipes.susy.cvd('o0lrgoxtigv7bp') // remapped from original line 16
-    .notConsumable(safeItemId('1x susy:wafer.silicon'))
+    .notConsumable(safeItemId('1x gtceu:silicon_wafer'))
     .inputFluids(safeFluidOf('gtceu:methane', 100))
     .inputFluids(safeFluidOf('gtceu:hydrogen', 9900))
-    .chancedOutput(safeItemId('1x susy:raw_diamond'), 1000, 0)
+    .chancedOutput(safeItemId('1x gtceu:raw_diamond'), 1000, 0)
     .duration(200)
     .EUt(120)
 
   event.recipes.gtceu.cutter('8cwlhtup5lnssn') // remapped from original line 25
-    .itemInputs(safeItemId('1x susy:raw_diamond'))
+    .itemInputs(safeItemId('1x gtceu:raw_diamond'))
     .chancedOutput(safeItemId('1x minecraft:diamond'), 8000, 0)
-    .chancedOutput('1x #forge:gems/exquisite_diamond', 500, 0)
+    .chancedOutput('1x #forge:exquisite_gems/diamond', 500, 0)
     .duration(200)
     .EUt(120)
 
   event.recipes.gtceu.fluid_solidifier('qeukluu3yiwwsn') // remapped from original line 33
     .inputFluids(safeFluidOf('susy:alumina', 36))
-    .notConsumable(safeItemId('1x susy:shape.mold.ball'))
+    .notConsumable(safeItemId('1x gtceu:ball_casting_mold'))
     .chancedOutput(safeItemId('1x susy:seed_crystal.alumina'), 1000, 1000)
     .duration(200)
     .EUt(120)
@@ -33,7 +35,7 @@ ServerEvents.recipes(event => {
   event.recipes.gtceu.cutter('pibjdgb4xgkb5u') // remapped from original line 50
     .itemInputs(safeItemId('1x susy:boule.ruby'))
     .itemOutputs(safeItemId('1x susy:seed_crystal.alumina'))
-    .itemOutputs('4x #forge:gems/exquisite_ruby')
+    .itemOutputs('4x #forge:exquisite_gems/ruby')
     .duration(400)
     .EUt(120)
 
@@ -49,7 +51,7 @@ ServerEvents.recipes(event => {
   event.recipes.gtceu.cutter('sav9jc8sgozfdj') // remapped from original line 68
     .itemInputs(safeItemId('1x susy:boule.sapphire'))
     .itemOutputs(safeItemId('1x susy:seed_crystal.alumina'))
-    .itemOutputs('4x #forge:gems/exquisite_sapphire')
+    .itemOutputs('4x #forge:exquisite_gems/sapphire')
     .duration(400)
     .EUt(120)
 
@@ -71,7 +73,7 @@ ServerEvents.recipes(event => {
   event.recipes.gtceu.cutter('bh3laexevvg19d') // remapped from original line 93
     .itemInputs(safeItemId('1x susy:boule.emerald'))
     .itemOutputs(safeItemId('1x susy:seed_crystal.emerald'))
-    .itemOutputs('6x #forge:gems/exquisite_emerald')
+    .itemOutputs('6x #forge:exquisite_gems/emerald')
     .duration(400)
     .EUt(120)
 
@@ -79,7 +81,7 @@ ServerEvents.recipes(event => {
     .itemInputs('5x #forge:dusts/barium_carbonate')
     .itemInputs('3x #forge:dusts/rutile')
     .inputFluids(safeFluidOf('minecraft:water', 1000))
-    .itemOutputs('1x #forge:gems/exquisite_barium_titanate')
+    .itemOutputs('1x #forge:exquisite_gems/barium_titanate')
     .duration(200)
     .EUt(120)
 
@@ -131,7 +133,7 @@ ServerEvents.recipes(event => {
   event.recipes.gtceu.cutter('5yrd0fp14jdr19') // remapped from original line 165
     .itemInputs(safeItemId('1x susy:boule.lithium_niobate'))
     .itemOutputs(safeItemId('1x susy:seed_crystal.lithium_niobate'))
-    .itemOutputs('5x #forge:gems/exquisite_lithium_niobate')
+    .itemOutputs('5x #forge:exquisite_gems/lithium_niobate')
     .duration(400)
     .EUt(120)
 
@@ -148,18 +150,17 @@ ServerEvents.recipes(event => {
     .itemInputs('3x #forge:dusts/zirconium_dioxide')
     .itemOutputs('10x #forge:dusts/lead_zirconate_titanate')
     .duration(200)
-    .EUt(voltAmps[3])
+    .EUt(3)
 
   event.recipes.gtceu.forming_press('rzle994toumnu2') // remapped from original line 192
     .itemInputs('10x #forge:dusts/lead_zirconate_titanate')
-    .notConsumable(safeItemId('1x susy:shape.mold.ball'))
+    .notConsumable(safeItemId('1x gtceu:ball_casting_mold'))
     .itemOutputs('1x #forge:gems/lead_zirconate_titanate')
     .duration(500)
-    .EUt(voltAmps[1])
+    .EUt(1)
 
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers
  // The following entries are unknown or couldn't be parsed, you should rewrite them manually.
-  // import globals.Globals
   // CVD = recipemap('cvd')
   // CUTTER = recipemap('cutter')
   // CRYSTALLIZER = recipemap('crystallizer')
@@ -167,7 +168,7 @@ ServerEvents.recipes(event => {
   // CUTTER = recipemap('cutter')
   // FORGE_HAMMER = recipemap('forge_hammer')
   // AUTOCLAVE = recipemap('autoclave')
-  // BR = recipemap('batch_reactor')
+  // BR = recipemap('batch_reactor' )
   // ROASTER = recipemap('roaster')
   // TUBE_FURNACE = recipemap('tube_furnace')
   // REACTION_FURNACE = recipemap('reaction_furnace')

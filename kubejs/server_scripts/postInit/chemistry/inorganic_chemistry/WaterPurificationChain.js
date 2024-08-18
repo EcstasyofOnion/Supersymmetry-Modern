@@ -1,3 +1,9 @@
+import globals.Globals
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.stack.UnificationEntry;
+
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:centrifuge', input: safeFluidOf('gtceu:salt_water')})
 
@@ -240,11 +246,6 @@ ServerEvents.recipes(event => {
 
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers
  // The following entries are unknown or couldn't be parsed, you should rewrite them manually.
-  // import globals.Globals
-  // import gregtech.api.recipes.ModHandler;
-  // import gregtech.api.unification.material.Materials;
-  // import gregtech.api.unification.ore.OrePrefix;
-  // import gregtech.api.unification.stack.UnificationEntry;
   // def MIXER = recipemap('mixer');
   // def CLARIFIER = recipemap('clarifier');
   // def DRYER = recipemap('dryer');

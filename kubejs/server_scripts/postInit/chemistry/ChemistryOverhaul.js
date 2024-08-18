@@ -1,8 +1,14 @@
+import globals.Globals
+import static globals.CarbonGlobals.*
+import static gregtech.api.unification.material.Materials.*;
+import gregtech.api.unification.material.MarkerMaterials;
+import static gregtech.api.unification.ore.OrePrefix.dye;
+
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/calcite' && '#forge:dusts/salt'})
-  event.remove({ type: 'gtceu:centrifuge', input: safeFluidOf('susy:gtfo_sodium_carbonate_solution')})
+  //event.remove({ type: 'gtceu:centrifuge', input: safeFluidOf('susy:gtfo_sodium_carbonate_solution')})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/soda_ash' && safeFluidOf('minecraft:water')})
-  event.remove({ type: 'gtceu:chemical_bath', input: safeItemId('gregtechfoodoption:chocolate_liquor_refined_crushed') && 'susy:gregtechfoodoption:chocolate_liquor_refined_crushed' && safeFluidOf('susy:gtfo_sodium_carbonate_solution')})
+  //event.remove({ type: 'gtceu:chemical_bath', input: safeItemId('gregtechfoodoption:chocolate_liquor_refined_crushed') && 'susy:gregtechfoodoption:chocolate_liquor_refined_crushed' && safeFluidOf('susy:gtfo_sodium_carbonate_solution')})
   event.remove({ type: 'susy:batch_reactor', input: '#forge:dusts/phosphorus_pentoxide' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:mixer', input: safeFluidOf('gtceu:nitric_acid') && safeFluidOf('gtceu:sulfuric_acid')})
 
@@ -276,13 +282,14 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('xvxojlecm5hepz') // remapped from original line 412
+  /*event.recipes.susy.batch_reactor('xvxojlecm5hepz') // remapped from original line 412
     .itemInputs('2x #forge:dusts/iron_ii_sulfide')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 2000))
     .itemOutputs('3x #forge:dusts/iron_ii_chloride')
     .outputFluids(safeFluidOf('gtceu:hydrogen_sulfide', 1000))
     .duration(30)
     .EUt(7)
+  */
 
   event.recipes.susy.roaster('k1hltitmggbi8d') // remapped from original line 421
     .itemInputs('1x #forge:dusts/any_purity_sulfur')
@@ -997,13 +1004,14 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('bgqrjew0epgfn2') // remapped from original line 1324
+  /*event.recipes.susy.batch_reactor('bgqrjew0epgfn2') // remapped from original line 1324
     .inputFluids(safeFluidOf('susy:isobutyraldehyde', 1000))
     .inputFluids(safeFluidOf('gtceu:hydrogen', 2000))
     .notConsumable(safeItemId('1x susy:hv_catalyst_bed_reduction'))
     .outputFluids(safeFluidOf('susy:isobutyl_alcohol', 1000))
-    .EUt(voltAmps[3])
+    .EUt(3)
     .duration(80)
+  */
 
   event.recipes.susy.batch_reactor('esd1m3lk7bdbjo') // remapped from original line 1333
     .inputFluids(safeFluidOf('susy:isobutyraldehyde', 1000))
@@ -2258,14 +2266,14 @@ ServerEvents.recipes(event => {
     .duration(10)
     .EUt(30)
 
-  event.recipes.gtceu.electrolyzer('kbckvksqi94pzj') // remapped from original line 2878
+  /* event.recipes.gtceu.electrolysis_chamber('kbckvksqi94pzj') // remapped from original line 2878
     .notConsumable('1x #forge:rods/platinum')
     .notConsumable(safeItemId('1x susy:graphite_electrode'))
     .inputFluids(safeFluidOf('susy:ammonium_bisulfate', 1584))
     .outputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .outputFluids(safeFluidOf('gtceu:ammonia', 1000))
     .duration(300)
-    .EUt(30)
+    .EUt(30) */
 
   event.recipes.susy.continuous_stirred_tank_reactor('pcaqjb6bfcbnzi') // remapped from original line 2890
     .inputFluids(safeFluidOf('gtceu:toluene', 50))
@@ -2456,13 +2464,13 @@ ServerEvents.recipes(event => {
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('aetmbjzo4t1uf2') // remapped from original line 3126
+  /* event.recipes.susy.batch_reactor('aetmbjzo4t1uf2') // remapped from original line 3126
     .inputFluids(safeFluidOf('susy:sodium_nitrate', 720))
     .inputFluids(safeFluidOf('gtceu:lead', 144))
     .outputFluids(safeFluidOf('susy:sodium_nitrite', 576))
     .itemOutputs('2x #forge:dusts/lead_oxide')
     .duration(20)
-    .EUt(30)
+    .EUt(30) */
 
   event.recipes.susy.roaster('aonsgkbdwfmjfp') // remapped from original line 3135
     .itemInputs('8x #forge:dusts/sodium_nitrite')
@@ -2535,7 +2543,7 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy./*DISTILLATION_TOWER('4bhfridx5wa3tw') // remapped from original line 3219
+   event.recipes.gtceu.distillation_tower('4bhfridx5wa3tw') // remapped from original line 3219
     .disableDistilleryRecipes(true)
     .circuit(1)
     .inputFluids(safeFluidOf('susy:diluted_ammonia_solution', 1000))
@@ -2543,7 +2551,7 @@ ServerEvents.recipes(event => {
     .outputFluids(safeFluidOf('gtceu:ammonia', 1000))
     .duration(40)
     .EUt(30)
-
+  
   event.recipes.gtceu.distillation_tower('taboxjfjg2j9wz') // remapped from original line 3229
     .inputFluids(safeFluidOf('susy:diluted_ammonia_solution', 1000))
     .outputFluids(safeFluidOf('susy:ammonia_solution', 1000))
@@ -2566,13 +2574,14 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.electrolytic_cell('tvurpwc0kjeubn') // remapped from original line 3255
+   event.recipes.gtceu.electrolyzer('tvurpwc0kjeubn') // remapped from original line 3255
     .inputFluids(safeFluidOf('susy:ammonium_iodide', 1728))
     .outputFluids(safeFluidOf('gtceu:ammonia', 2000))
     .outputFluids(safeFluidOf('gtceu:hydrogen', 2000))
     .itemOutputs('2x #forge:dusts/iodine')
     .duration(300)
     .EUt(30)
+  
 
   event.recipes.susy.continuous_stirred_tank_reactor('pdtbekmqtkb9rm') // remapped from original line 3265
     .inputFluids(safeFluidOf('susy:ethylene_oxide', 70))
@@ -3474,11 +3483,6 @@ ServerEvents.recipes(event => {
   // }
 
  // The following entries are unknown or couldn't be parsed, you should rewrite them manually.
-  // import globals.Globals
-  // import static globals.CarbonGlobals.*
-  // import static gregtech.api.unification.material.Materials.*;
-  // import gregtech.api.unification.material.MarkerMaterials;
-  // import static gregtech.api.unification.ore.OrePrefix.dye;
   // VACUUM_FREEZER = recipemap('vacuum_freezer')
   // CSTR = recipemap('continuous_stirred_tank_reactor')
   // TBR = recipemap('trickle_bed_reactor')
