@@ -2574,7 +2574,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-   event.recipes.gtceu.electrolyzer('tvurpwc0kjeubn') // remapped from original line 3255
+   event.recipes.susy.electrolytic_cell('tvurpwc0kjeubn') // remapped from original line 3255
     .inputFluids(safeFluidOf('susy:ammonium_iodide', 1728))
     .outputFluids(safeFluidOf('gtceu:ammonia', 2000))
     .outputFluids(safeFluidOf('gtceu:hydrogen', 2000))
@@ -3509,7 +3509,6 @@ ServerEvents.recipes(event => {
   // COMPRESSOR = recipemap('compressor')
   // ASSEMBLER = recipemap('assembler')
   // ELECTROLYZER = recipemap('electrolyzer')
-  // ELECTROLYTIC_CELL = recipemap('electrolytic_cell')
   // REACTION_FURNACE = recipemap('reaction_furnace')
   // ELECTROMAGNETIC_SEPARATOR = recipemap('electromagnetic_separator')
   // PSA = recipemap('pressure_swing_adsorption')
