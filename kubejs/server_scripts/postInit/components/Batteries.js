@@ -214,27 +214,45 @@ ServerEvents.recipes(event => {
     .duration(400)
     .EUt(16)
 
+    event.shaped('susy:anode.lead', [
+      '   ',
+      ' AB',
+      '   '
+    ], {
+      A: 'gtceu:lead_plate',
+      B: 'gtceu:tin_single_cable'
+    }
+    )
+
+    event.shaped('susy:cathode.lead', [
+      '   ',
+      'BA ',
+      '   '
+    ], {
+      A: 'gtceu:lead_plate',
+      B: 'gtceu:tin_single_cable'
+    }
+    )
+
+    event.shaped('susy:battery.lead_acid', [
+      'AEA',
+      'DCB',
+      'AAA'
+    ], {
+      A: 'gtceu:lead_plate',
+      B: 'susy:anode.lead',
+      C: 'gtceu:sulfuric_acid_bucket',
+      D: 'susy:cathode.lead',
+      E: 'gtceu:tin_single_cable'
+    }
+    )
+
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers
  // The following entries are unknown or couldn't be parsed, you should rewrite them manually.
   // CSTR = recipemap('continuous_stirred_tank_reactor')
   // ROASTER = recipemap('roaster')
   // BR = recipemap('batch_reactor')
   // BCR = recipemap('bubble_column_reactor')
-  // crafting.addShaped("battery_lead_acid", metaitem('battery.lead_acid'), [
-  //         [metaitem('plateBatteryAlloy'), metaitem('cableGtSingleTin'), metaitem('plateBatteryAlloy')],
-  //         [metaitem('cathode.lead'),fluid('sulfuric_acid') * 1000, metaitem('anode.lead')],
-  //         [metaitem('plateBatteryAlloy'), metaitem('plateBatteryAlloy'), metaitem('plateBatteryAlloy')]
-  // ]);
-  // crafting.addShaped("cathode_lead", metaitem('cathode.lead'), [
-  //         [null,null,null],
-  //         [metaitem('cableGtSingleTin'), metaitem('plateLead'),null],
-  //         [null,null,null]
-  // ]);
-  // crafting.addShaped("anode_lead", metaitem('anode.lead'), [
-  //         [null,null,null],
-  //         [null,metaitem('plateLead'),metaitem('cableGtSingleTin')],
-  //         [null,null,null]
-  // ]);
   // crafting.addShaped("drum_lead", metaitem('drum.lead'), [
   //         [null,ore('craftingToolHardHammer'),null],
   //         [metaitem('plateLead'),metaitem('stickLongLead'),metaitem('plateLead')],
