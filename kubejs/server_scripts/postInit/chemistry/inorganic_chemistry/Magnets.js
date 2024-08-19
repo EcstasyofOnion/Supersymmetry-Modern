@@ -1,8 +1,4 @@
-import globals.Globals
-import globals.SinteringGlobals
-
-//onEvent('recipes', event => {
-    ServerEvents.recipes(event => {
+ServerEvents.recipes(event => {
         [
              'gtceu:shaped/electric_motor_ev',
              'gtceu:shaped/electric_motor_iv',

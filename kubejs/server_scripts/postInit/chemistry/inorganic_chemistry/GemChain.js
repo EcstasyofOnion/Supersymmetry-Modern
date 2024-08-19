@@ -1,5 +1,3 @@
-import globals.Globals
-
 ServerEvents.recipes(event => {
 
   event.recipes.susy.cvd('o0lrgoxtigv7bp') // remapped from original line 16

@@ -1,9 +1,3 @@
-import globals.Globals
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:centrifuge', input: safeFluidOf('gtceu:salt_water')})
 

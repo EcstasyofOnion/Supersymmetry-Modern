@@ -1,9 +1,3 @@
-import globals.Globals
-import static globals.CarbonGlobals.*
-import static gregtech.api.unification.material.Materials.*;
-import gregtech.api.unification.material.MarkerMaterials;
-import static gregtech.api.unification.ore.OrePrefix.dye;
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/calcite' && '#forge:dusts/salt'})
   //event.remove({ type: 'gtceu:centrifuge', input: safeFluidOf('susy:gtfo_sodium_carbonate_solution')})

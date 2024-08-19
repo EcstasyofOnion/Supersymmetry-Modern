@@ -1,13 +1,3 @@
-import globals.Globals
-import gregtech.api.recipes.recipeproperties.RecipeProperty;
-import gregtech.api.recipes.RecipeBuilder;
-import static gregtech.api.recipes.RecipeMaps.*;
-import gregtech.api.unification.material.Materials.*;
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:canner', input: 'susy:battery.hull.lv' && '#forge:dusts/sodium'})
   event.remove({ type: 'gtceu:canner', input: 'susy:battery.hull.mv' && '#forge:dusts/sodium'})
