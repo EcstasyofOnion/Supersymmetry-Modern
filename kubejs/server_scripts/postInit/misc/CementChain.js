@@ -1,11 +1,15 @@
+import globals.Globals
+import static globals.SinteringGlobals.*
+
+
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/clay' && '#forge:dusts/stone' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/stone' && '#forge:dusts/calcite' && '#forge:dusts/gypsum' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/stone' && '#forge:dusts/marble' && '#forge:dusts/gypsum' && safeFluidOf('minecraft:water')})
 
-  event.recipes.susy.mods.gregtech.macerator('iwmvszjmx3slaj') // remapped from original line 94
-    .itemInputs(safeItemId('1x susy:cement.clinker'))
-    .itemOutputs(safeItemId('16x susy:cement.dust'))
+  event.recipes.gtceu.macerator('kcxbleetmww5af') // remapped from original line 94
+    .itemInputs('susy:cement.clinker')
+    .itemOutputs('susy:cement.dust')
     .duration(20)
     .EUt(voltAmps[0])
 
@@ -124,8 +128,6 @@ ServerEvents.recipes(event => {
   // }
 
  // The following entries are unknown or couldn't be parsed, you should rewrite them manually.
-  // import globals.Globals
-  // import static globals.SinteringGlobals.*
   // class CoolantGases {
   //     String name
   //     String byproduct
