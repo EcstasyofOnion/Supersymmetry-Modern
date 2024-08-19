@@ -1,11 +1,3 @@
-import gregtech.loaders.recipe.handlers.OreRecipeHandler;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.material.Material;
-import classes.*;
-import gregtech.api.unification.material.properties.PropertyKey;
-import gregtech.api.unification.material.properties.IngotProperty;
-import gregtech.api.unification.ore.OrePrefix;
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:ingots/hot_kanthal' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:ingots/hot_kanthal' && safeFluidOf('gtceu:distilled_water')})

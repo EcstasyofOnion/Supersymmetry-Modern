@@ -1,9 +1,3 @@
-import globals.Globals
-import static globals.CarbonGlobals.*
-import static gregtech.api.unification.material.Materials.*; 
-import gregtech.api.unification.material.MarkerMaterials;
-import static gregtech.api.unification.ore.OrePrefix.dye;
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/iron' && '#forge:dusts/nickel' && '#forge:dusts/manganese' && '#forge:dusts/chrome' && 'susy:circuit.integrated'})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/iron' && '#forge:dusts/invar' && '#forge:dusts/manganese' && '#forge:dusts/chrome' && 'susy:circuit.integrated'})

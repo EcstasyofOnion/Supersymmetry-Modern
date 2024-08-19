@@ -1,7 +1,3 @@
-import globals.Globals
-import static globals.SinteringGlobals.*
-
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/clay' && '#forge:dusts/stone' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/stone' && '#forge:dusts/calcite' && '#forge:dusts/gypsum' && safeFluidOf('minecraft:water')})

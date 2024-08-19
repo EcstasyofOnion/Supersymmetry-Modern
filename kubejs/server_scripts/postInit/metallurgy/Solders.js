@@ -1,5 +1,3 @@
-import globals.Globals
-
 ServerEvents.recipes(event => {
 
   event.recipes.gtceu.alloy_smelter('0fx9mxgthhnqqp') // remapped from original line 7

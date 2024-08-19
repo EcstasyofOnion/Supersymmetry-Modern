@@ -1,6 +1,3 @@
-import classes.*
-import globals.Globals
-
 ServerEvents.recipes(event => {
 
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers

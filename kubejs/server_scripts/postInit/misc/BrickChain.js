@@ -1,9 +1,3 @@
-import globals.Globals
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.ore.OrePrefix;
-import gregtech.api.unification.stack.UnificationEntry;
-
 ServerEvents.recipes(event => {
         event.smelting('1x susy:limestone', '1x susy:limestone_dust')
         event.shapeless('1x minecraft:sand', [

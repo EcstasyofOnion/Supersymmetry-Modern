@@ -1,5 +1,3 @@
-import globals.Globals
-
 ServerEvents.recipes(event => {
 
   event.recipes.gtceu.mixer('yiotimone5ae9e') // remapped from original line 7
