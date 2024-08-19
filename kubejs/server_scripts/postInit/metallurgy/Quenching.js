@@ -1,15 +1,23 @@
+import gregtech.loaders.recipe.handlers.OreRecipeHandler;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.material.Material;
+import classes.*;
+import gregtech.api.unification.material.properties.PropertyKey;
+import gregtech.api.unification.material.properties.IngotProperty;
+import gregtech.api.unification.ore.OrePrefix;
+
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:ingots/hot_kanthal' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:ingots/hot_kanthal' && safeFluidOf('gtceu:distilled_water')})
 
-  event.recipes.susy.radiator('cga466keld3cqx') // remapped from original line 168
+  event.recipes.susy.radiator('ccfsololl3nd4q') // remapped from original line 168
     .inputFluids(safeFluidOf('susy:hot_air', 1000))
-    .outputFluids(safeFluidOf('gtceu:air', 1000))
+    .outputFluids(safeFluidOf('gtceu:air') * 1000)
     .duration(100)
 
-  event.recipes.susy.cooling_unit('1wczxywjkq4xek') // remapped from original line 174
+  event.recipes.susy.cooling_unit('wfwib1qtbiqovp') // remapped from original line 174
     .inputFluids(safeFluidOf('susy:hot_air', 1000))
-    .outputFluids(safeFluidOf('gtceu:air', 1000))
+    .outputFluids(safeFluidOf('gtceu:air') * 1000)
     .duration(50)
     .EUt(480)
 
@@ -53,13 +61,6 @@ ServerEvents.recipes(event => {
   // }
 
  // The following entries are unknown or couldn't be parsed, you should rewrite them manually.
-  // import gregtech.loaders.recipe.handlers.OreRecipeHandler;
-  // import gregtech.api.unification.ore.OrePrefix;
-  // import gregtech.api.unification.material.Material;
-  // import classes.*;
-  // import gregtech.api.unification.material.properties.PropertyKey;
-  // import gregtech.api.unification.material.properties.IngotProperty;
-  // import gregtech.api.unification.ore.OrePrefix;
   // IQuenchingFluid Water = new IQuenchingFluid("water", 'warm_water', 1000, 100.0, false);
   // IQuenchingFluid Air = new IQuenchingFluid('air', 'hot_air', 10000, 1000.0, false);
   // IQuenchingFluid CompressedAir = new IQuenchingFluid('hp_air', 'hot_hp_air', 5000, 500.0, false);
