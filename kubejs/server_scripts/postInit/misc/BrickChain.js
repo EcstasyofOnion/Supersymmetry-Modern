@@ -1,5 +1,27 @@
-ServerEvents.recipes(event => {
+import globals.Globals
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.stack.UnificationEntry;
 
+ServerEvents.recipes(event => {
+        event.smelting('1x susy:limestone', '1x susy:limestone_dust')
+        event.shapeless('1x minecraft:sand', [
+            'susy:sand_dust',
+            'susy:sand_dust',
+            'susy:sand_dust',
+            'susy:sand_dust',
+        ]
+        )
+
+        event.shaped('1x minecraft:sand', [
+            'AA ', 
+            'AA ', 
+            '   '  
+        ], {
+            A: 'susy:sand_dust'
+        }
+        )
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers
   // for (name in name_removals) {
   //     crafting.remove(name)
@@ -38,12 +60,6 @@ ServerEvents.recipes(event => {
   //     [metaitem('dustFireclay'),metaitem('wooden_form.brick'), metaitem('dustFireclay')],
   //     [metaitem('dustFireclay'),metaitem('dustFireclay'),metaitem('dustFireclay')]
   // ]
-  // furnace.add(ore('stoneLimestone'), item('gregtech:meta_dust', 360))
-  // crafting.addShapeless('ManualFineSandPile',metaitem('sand.dust') * 4, [item('minecraft:sand')]) 
-  // crafting.addShaped('ManualSandBlock', item('minecraft:sand'), [
-  //     [metaitem('sand.dust'),metaitem('sand.dust')],
-  //     [metaitem('sand.dust'),metaitem('sand.dust')]
-  // ])
   // crafting.addShapeless('ManualFireclay',metaitem('dustFireclay') * 2, fireclay_ingredients) 
   // crafting.addShaped('pfb_casing_firebricks', item('gregtech:metal_casing', 1), [
   //     [metaitem('brick.fireclay'),metaitem('brick.fireclay')],

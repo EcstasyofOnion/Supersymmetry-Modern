@@ -1,3 +1,6 @@
+import classes.*
+import globals.Globals
+
 ServerEvents.recipes(event => {
 
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers
@@ -22,8 +25,6 @@ ServerEvents.recipes(event => {
   // }
 
  // The following entries are unknown or couldn't be parsed, you should rewrite them manually.
-  // import classes.*
-  // import globals.Globals
   // log.infoMC("Running OreSorting.groovy...")
   // int fluid_amount = 100;
   // def orthomagmatic_tier_1 = [
